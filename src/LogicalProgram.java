@@ -41,4 +41,19 @@ public class LogicalProgram {
         System.out.println("\n" + number + " = " + sumAllDivisor);
         System.out.println(number+" Is Not Perfect Number");
     }
+    public void primeNumber(){
+        int primeNumber=0;
+        System.out.println("Enter any number");
+        number = scan.nextInt();
+        for (int i = 0; i < number/2; i++) {
+            if (number%2==0){
+                primeNumber=1;
+                break;
+            }
+        }
+        if (primeNumber==0)
+            System.out.println(number+" Is Prime Number");
+        else
+            System.out.println(number+" Is Not Prime Number");
+    }
 }
