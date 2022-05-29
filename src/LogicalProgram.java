@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class LogicalProgram {
-    public int firstValue = 0;
-    public int secondValue = 1;
     public int number;
     Scanner scan = new Scanner(System.in);
 
     public void fibonacciSeries() {
+        int firstValue=0;
+        int secondValue=1;
         System.out.println("Enter any number");
-        int number = scan.nextInt();
+        number = scan.nextInt();
         System.out.print("Fibonacci Series =");
         for (int i = 0; i < number; i++) {
             System.out.print(firstValue + ",");
@@ -16,5 +16,29 @@ public class LogicalProgram {
             firstValue = secondValue;
             secondValue = temp;
         }
+    }
+    public void perfectNumber(){
+        int sumAllDivisor=0;
+        int i=1;
+        System.out.println("Enter any number");
+        number = scan.nextInt();
+        System.out.println("Perfect Number");
+        System.out.print(number+" = ");
+        while (i<=number/2){
+            if (number%i==0)
+            {
+                System.out.print(i);
+                sumAllDivisor+=i;
+                System.out.print(" + ");
+            }
+            i++;
+        }
+        if (number==sumAllDivisor) {
+            System.out.println("\n" + number + " = " + sumAllDivisor);
+            System.out.println(number+" Is Perfect Number");
+            return;
+        }
+        System.out.println("\n" + number + " = " + sumAllDivisor);
+        System.out.println(number+" Is Not Perfect Number");
     }
 }
